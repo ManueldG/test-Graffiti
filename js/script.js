@@ -12,11 +12,12 @@ function main(){
     }*/
 }
 
-function clicked(event){
+function clicked(event){ // scorro l'array ed elimino gli elementi non cliccati
     array = document.getElementsByClassName('rows');
     id = event.parentElement.id;
     
-        for (elem of array) {               
+        for (elem of array) {  
+            console.log(elem.id)             
             if (elem.id!=id){  
                 elem.remove();
             }                

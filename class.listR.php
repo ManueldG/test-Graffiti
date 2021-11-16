@@ -10,14 +10,14 @@ class ListR{
          
     }
 
-    public function random(){
+    public function random(){ //genero stringa random [1-9] [a-z] [A-Z] 
         
         for ($i=0 ;  $i < 100 ; $i++){
             $lista[$i] = "";
             for ($k=0 ;  $k < 10 ; $k++){
                 do{
 
-                    $rnd = random_int(0,2);
+                    $rnd = random_int(0,2); // sceglie a caso se numero o stringa 
 
                     if ($rnd == 0)                    
                         $lista[$i] .= (random_int(0,9));
@@ -26,9 +26,7 @@ class ListR{
                     else
                         $lista[$i] .= chr(random_int(97,122));
 
-                }while(!in_array($lista[$i], $lista));
-                
-                
+                }while(!in_array($lista[$i], $lista));                               
 
             }
         }
