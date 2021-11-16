@@ -6,7 +6,7 @@ namespace listR;
  * */
 class ListR{
 
-    public function __construct(){
+    public function __construct(){ //metodo costruttore
          
     }
 
@@ -14,7 +14,9 @@ class ListR{
         
         for ($i=0 ;  $i < 100 ; $i++){
             $lista[$i] = "";
+
             for ($k=0 ;  $k < 10 ; $k++){
+                
                 do{
 
                     $rnd = random_int(0,2); // sceglie a caso se numero o stringa 
