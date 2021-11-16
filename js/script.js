@@ -15,13 +15,11 @@ function main(){
 function clicked(event){
     array = document.getElementsByClassName('rows');
     id = event.parentElement.id;
-    console.log("event",event.parentElement);
-        for (elem of array) {            
-            
+    
+        for (elem of array) {               
             if (elem.id!=id){  
-                elem.outerHTML="";
-            }
-                
+                elem.remove();
+            }                
         }
 
 
