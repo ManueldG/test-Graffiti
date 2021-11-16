@@ -2,7 +2,7 @@
 namespace listR;
 /***
  *  @author MdG
- *  @param 
+ *  
  * */
 class ListR{
 
@@ -30,10 +30,7 @@ class ListR{
 
             }
         }
-            
-        
     return $lista;
-
     }
 
     
