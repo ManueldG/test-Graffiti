@@ -14,6 +14,7 @@ function main(){
 
 function clicked(event){ // scorro l'array ed elimino gli elementi non cliccati
     array = document.getElementsByClassName('rows');
+    console.log(event.parentElement.id);
     id = event.parentElement.id;
     
         for (elem of array) {  
