@@ -1,16 +1,28 @@
 function main(){
+    console.log("cio");
 
-    document.addEventListener("click", clicked);
+    console.log(document.getElementsByClassName('rows'));
+
+
     array = document.getElementsByClassName('rows');
-
+/*
+    for (elem of array) {
+        if (elem.id!="10")
+            elem.hidden=true;
+    }*/
 }
 
-function clicked(){
+function clicked(event){
     array = document.getElementsByClassName('rows');
-    
-        for (elem of array) {
-            if (elem.id!=this.activeElement.parentNode.id)
-                elem.hidden=true;
+    id = event.parentElement.id;
+    console.log("event",event.parentElement);
+        for (elem of array) {            
+            
+            if (elem.id!=id){  
+                elem.outerHTML="";
+            }
+                
         }
+
 
 }

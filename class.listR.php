@@ -13,22 +13,28 @@ class ListR{
     public function random(){
         
         for ($i=0 ;  $i < 100 ; $i++){
-            $b[$i] = "";
+            $lista[$i] = "";
             for ($k=0 ;  $k < 10 ; $k++){
-                $rnd = random_int(0,2);
+                do{
+
+                    $rnd = random_int(0,2);
+
+                    if ($rnd == 0)                    
+                        $lista[$i] .= (random_int(0,9));
+                    else if($rnd == 1)
+                        $lista[$i] .= chr(random_int(65,90));
+                    else
+                        $lista[$i] .= chr(random_int(97,122));
+
+                }while(!in_array($lista[$i], $lista));
                 
-                if ($rnd == 0)                    
-                    $b[$i] .= (random_int(0,9));
-                else if($rnd == 1)
-                    $b[$i] .= chr(random_int(65,90));
-                else
-                    $b[$i] .= chr(random_int(97,122));
+                
 
             }
         }
             
         
-    return $b;
+    return $lista;
 
     }
 

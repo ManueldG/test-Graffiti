@@ -16,8 +16,8 @@ $rows=($x->random());
 <html lang="en">
 
 <link rel="stylesheet" href="http://casaalmada.hostinggratis.it/doc/css/reset.css">
-<link rel="stylesheet" href="css/style.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css' integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==' crossorigin='anonymous'/>
+<link rel="stylesheet" href="css/style.css">
 <script src="js/script.js"></script>
 
 <meta charset="UTF-8">
@@ -29,10 +29,10 @@ $rows=($x->random());
 <body onload="main()">
 
 <div class="container p-5">
-    <ul class="list-group w-25 text-center d-flex justify-content-center">    
+    <ul class="list-group d-flex justify-content-center">    
 <?
 foreach ($rows as $key => $row)
-    echo "      <li class='rows list-group-item list-group-item-info mb-1' id='".$key."'><a href='#'>".$row."</li>";
+    echo "      <li class='rows d-flex justify-content-center list-group-item list-group-item-info ' id='".$key."'><a href='#' onClick='clicked(this)'>".$row."</a></li>";
 ?>
     </ul>
 
